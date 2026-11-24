@@ -8,15 +8,15 @@ FROM customers;
 SELECT order_id, shipped_date - order_date
 FROM orders
 --4. Выбрать все уникальные города в которых "зарегистрированы" заказчики
-SELECT DISTINCT ship_city
-FROM orders
+SELECT DISTINCT city
+FROM customers
 --5. Выбрать все уникальные сочетания городов и стран в которых "зарегистрированы" заказчики
-SELECT DISTINCT ship_city, ship_country
-FROM orders
+SELECT DISTINCT city, country
+FROM customers
 --6. Посчитать кол-во заказчиков
 SELECT COUNT (*)
-FROM orders
+FROM customers
 --7. Посчитать кол-во уникальных стран в которых "зарегистрированы" заказчики
-SELECT COUNT (DISTINCT ship_country)
-FROM orders
+SELECT COUNT (DISTINCT country)
+FROM customers
 
